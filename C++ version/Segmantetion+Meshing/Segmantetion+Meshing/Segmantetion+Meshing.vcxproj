@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C1BF35F3-BDCD-4FBE-BC19-34CBADEA3DBC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SegmantetionMeshing</RootNamespace>
+    <ProjectName>GSOC2015</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cgalv2m.h" />
+    <ClInclude Include="corner_points.h" />
+    <ClInclude Include="diag.h" />
+    <ClInclude Include="eml_sort.h" />
+    <ClInclude Include="eye.h" />
+    <ClInclude Include="fclose.h" />
+    <ClInclude Include="fileManager.h" />
+    <ClInclude Include="fillholes.h" />
+    <ClInclude Include="fillimg.h" />
+    <ClInclude Include="fopen.h" />
+    <ClInclude Include="fprintf.h" />
+    <ClInclude Include="fread.h" />
+    <ClInclude Include="imdilate.h" />
+    <ClInclude Include="imreconstruct.h" />
+    <ClInclude Include="meshing.h" />
+    <ClInclude Include="norm.h" />
+    <ClInclude Include="padarray.h" />
+    <ClInclude Include="prod.h" />
+    <ClInclude Include="readmedit.h" />
+    <ClInclude Include="read_mri_simple.h" />
+    <ClInclude Include="repmat.h" />
+    <ClInclude Include="rot_matrix.h" />
+    <ClInclude Include="rtGetInf.h" />
+    <ClInclude Include="rtGetNaN.h" />
+    <ClInclude Include="rtwtypes.h" />
+    <ClInclude Include="rt_nonfinite.h" />
+    <ClInclude Include="saveinr.h" />
+    <ClInclude Include="segmentation.h" />
+    <ClInclude Include="Segmentation1_emxAPI.h" />
+    <ClInclude Include="Segmentation1_emxutil.h" />
+    <ClInclude Include="Segmentation1_initialize.h" />
+    <ClInclude Include="Segmentation1_rtwutil.h" />
+    <ClInclude Include="Segmentation1_terminate.h" />
+    <ClInclude Include="Segmentation1_types.h" />
+    <ClInclude Include="sphere.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="volumesegment.h" />
+    <ClInclude Include="warp_apply.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cgalv2m.cpp" />
+    <ClCompile Include="corner_points.cpp" />
+    <ClCompile Include="diag.cpp" />
+    <ClCompile Include="eml_sort.cpp" />
+    <ClCompile Include="eye.cpp" />
+    <ClCompile Include="fclose.cpp" />
+    <ClCompile Include="fileManager.cpp" />
+    <ClCompile Include="fillholes.cpp" />
+    <ClCompile Include="fillimg.cpp" />
+    <ClCompile Include="fopen.cpp" />
+    <ClCompile Include="fprintf.cpp" />
+    <ClCompile Include="fread.cpp" />
+    <ClCompile Include="imdilate.cpp" />
+    <ClCompile Include="imreconstruct.cpp" />
+    <ClCompile Include="meshing.cpp" />
+    <ClCompile Include="norm.cpp" />
+    <ClCompile Include="padarray.cpp" />
+    <ClCompile Include="prod.cpp" />
+    <ClCompile Include="readmedit.cpp" />
+    <ClCompile Include="read_mri_simple.cpp" />
+    <ClCompile Include="repmat.cpp" />
+    <ClCompile Include="rot_matrix.cpp" />
+    <ClCompile Include="rtGetInf.cpp" />
+    <ClCompile Include="rtGetNaN.cpp" />
+    <ClCompile Include="rt_nonfinite.cpp" />
+    <ClCompile Include="saveinr.cpp" />
+    <ClCompile Include="Segmantetion+Meshing.cpp" />
+    <ClCompile Include="segmentation.cpp" />
+    <ClCompile Include="Segmentation1_emxAPI.cpp" />
+    <ClCompile Include="Segmentation1_emxutil.cpp" />
+    <ClCompile Include="Segmentation1_initialize.cpp" />
+    <ClCompile Include="Segmentation1_rtwutil.cpp" />
+    <ClCompile Include="Segmentation1_terminate.cpp" />
+    <ClCompile Include="sphere.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="volumesegment.cpp" />
+    <ClCompile Include="warp_apply.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
