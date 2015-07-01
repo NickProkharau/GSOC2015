@@ -11,3 +11,4 @@ segmentation.m script reads input images in special form for further processing.
 
 meshing.m script load segmentationmri.mat file and process it. First this script fills holes in each part of segmentation (scalp, skull and brain), combines scalp, skull and brain into one volume and meshes this volume with tetrahedral elements. Nodes, elements and faces are output of meshing.  As the result script makes diffrent visualizations of mesh using nodes, elements and faces abtained before.
 
+A C++ version of these scripts had been added
