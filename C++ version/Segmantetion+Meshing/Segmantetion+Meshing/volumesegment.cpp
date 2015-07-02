@@ -305,8 +305,7 @@ void b_volumesegment(const double mri_dim[3], const emxArray_real_T *mri_anatomy
 
   c_emxInit_boolean_T(&cleanbrain, 3);
   c_emxInit_boolean_T(&e_braindil, 3);
-  cleanbrain=d_brainmask;
-  //c_fillholes(d_brainmask, cleanbrain);
+  c_fillholes(d_brainmask, cleanbrain);
   braindil = e_braindil->size[0] * e_braindil->size[1] * e_braindil->size[2];
   e_braindil->size[0] = b_braindil->size[0];
   e_braindil->size[1] = b_braindil->size[1];
@@ -320,8 +319,7 @@ void b_volumesegment(const double mri_dim[3], const emxArray_real_T *mri_anatomy
   }
 
   emxFree_boolean_T(&b_braindil);
-  brainmask=e_braindil;
-  //c_fillholes(e_braindil, brainmask);
+  c_fillholes(e_braindil, brainmask);
 
   //  add brain image as additional segment
   braindil = cleanbrain->size[0] * cleanbrain->size[1] * cleanbrain->size[2];
